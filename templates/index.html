@@ -3,36 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Đăng nhập TOOL AI SunWin</title>
+  <title>Đăng nhập Tool AI SunWin</title>
   <style>
     body {
-      background-color: #111;
+      margin: 0;
+      background: linear-gradient(to bottom, #000000, #1e1e1e);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       color: white;
-      font-family: sans-serif;
+    }
+    .box {
+      background-color: #111;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,0,0.2);
       text-align: center;
-      padding-top: 100px;
+      width: 90%;
+      max-width: 400px;
     }
     input {
-      padding: 10px;
-      font-size: 18px;
-      margin: 10px;
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
       border-radius: 6px;
+      border: none;
+      font-size: 18px;
+      background-color: #222;
+      color: #0f0;
     }
     button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #0f0;
+      padding: 12px 24px;
+      background-color: #00ff00;
+      color: #000;
       border: none;
+      font-size: 18px;
       border-radius: 6px;
       cursor: pointer;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <h2>NHẬP KEY ĐỂ VÀO TOOL AI SUNWIN</h2>
-  <input id="key" placeholder="Nhập key..." />
-  <br />
-  <button onclick="checkKey()">Vào tool</button>
+  <div class="box">
+    <h2>🔐 Nhập KEY truy cập Tool AI</h2>
+    <input id="key" placeholder="Nhập key..." />
+    <button onclick="checkKey()">Vào hệ thống</button>
+  </div>
 
   <script>
     const keyAdmin = "admin123";
@@ -43,7 +62,7 @@
       if (input === keyAdmin || input === keyMember) {
         window.location.href = "dashboard.html";
       } else {
-        alert("Key sai! Liên hệ Admin.");
+        alert("❌ Key sai! Vui lòng liên hệ admin.");
       }
     }
   </script>
