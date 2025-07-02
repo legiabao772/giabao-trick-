@@ -53,14 +53,16 @@
     <button onclick="checkKey()">Vào hệ thống</button>
   </div>
 
-  <script>
-    const keyAdmin = "admin123";
-    const keyMember = "mem123";
+<script>
+  const keyAdmin = "admin123";
+  const keyMember = "mem123";
 
-    function checkKey() {
-      const input = document.getElementById("key").value.trim();
-      if (input === keyAdmin || input === keyMember) {
-        window.location.href = "dashboard.html";
-      } else {
-        alert("❌ Key sai! Vui lòng liên hệ admin.");
-      }
+  function checkKey() {
+    const input = document.getElementById("key").value.trim();
+    if (input === keyAdmin || input === keyMember) {
+      window.location.href = "dashboard.html";
+    } else {
+      alert("❌ Key sai! Vui lòng liên hệ admin.");
+    }
+  }
+</script>
