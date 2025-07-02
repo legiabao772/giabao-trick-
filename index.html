@@ -1,14 +1,66 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>Giabao AI - Nhập key</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đăng nhập Tool AI SunWin</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #000000, #1e1e1e);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
+    }
+    .box {
+      background-color: #111;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,0,0.2);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 15px 0;
+      border-radius: 6px;
+      border: none;
+      font-size: 18px;
+      background-color: #222;
+      color: #0f0;
+    }
+    button {
+      padding: 12px 24px;
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <h2>Nhập key truy cập</h2>
-    <form action="/dashboard" method="POST">
-        <input type="text" name="key" placeholder="Nhập key...">
-        <button type="submit">Vào</button>
-    </form>
-</body>
-</html>
+  <div class="box">
+    <h2>🔐 Nhập KEY truy cập Tool AI</h2>
+    <input id="key" placeholder="Nhập key..." />
+    <button onclick="checkKey()">Vào hệ thống</button>
+  </div>
+
+  <script>
+    const keyAdmin = "admin123";
+    const keyMember = "mem123";
+
+    function checkKey() {
+      const input = document.getElementById("key").value.trim();
+      if (input === keyAdmin || input === keyMember) {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("❌ Key sai! Vui lòng liên hệ admin.");
+      }
