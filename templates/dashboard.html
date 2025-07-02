@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dự đoán Tài/Xỉu AI</title>
+</head>
+<body>
+  <h2>Hệ thống AI Dự đoán Tài/Xỉu</h2>
+  <form>
+    <input type="text" placeholder="Nhập mã phiên..." required />
+    <button type="submit">Dự đoán</button>
+  </form>
+  <div id="ketqua"></div>
+
+  <script>
+    // Placeholder xử lý dự đoán - sau này sẽ nâng cấp bằng AI
+    document.querySelector("form").onsubmit = function(e) {
+      e.preventDefault();
+      const ketqua = document.getElementById("ketqua");
+      ketqua.innerText = "🔮 Dự đoán: TÀI (demo)";
+    };
+  </script>
+</body>
+</html>
