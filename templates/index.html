@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đăng nhập TOOL AI SunWin</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 6px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0f0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>NHẬP KEY ĐỂ VÀO TOOL AI SUNWIN</h2>
+  <input id="key" placeholder="Nhập key..." />
+  <br />
+  <button onclick="checkKey()">Vào tool</button>
+
+  <script>
+    const keyAdmin = "admin123";
+    const keyMember = "mem123";
+
+    function checkKey() {
+      const input = document.getElementById("key").value.trim();
+      if (input === keyAdmin || input === keyMember) {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Key sai! Liên hệ Admin.");
+      }
+    }
+  </script>
+</body>
+</html>
